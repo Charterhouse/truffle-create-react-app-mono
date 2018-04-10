@@ -1,0 +1,57 @@
+{
+  "name": "rdex",
+  "version": "0.0.1",
+  "description": "truffle-create-react-app starter for monorepos",
+  "repository": "https://github.com/Charterhouse/truffle-create-react-app-mono.git",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "react-test-renderer": "^16.3.1",
+    "truffle-contract": "^3.0.4",
+    "web3": "^1.0.0-beta.33"
+  },
+  "devDependencies": {
+    "babel-eslint": "8.2.2",
+    "deep-freeze-es6": "^1.0.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
+    "standard": "^11.0.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn lint-fix",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "yarn lint && react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "lint": "yarn standard",
+    "lint-fix": "yarn standard --fix --verbose"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "build/**",
+      "node_modules/**",
+      "src/contracts/**",
+      "truffle/node_modules/**"
+    ],
+    "envs": [
+      "es6",
+      "browser",
+      "jest"
+    ],
+    "globals": [
+      "artifacts",
+      "contract",
+      "assert"
+    ]
+  }
+}
