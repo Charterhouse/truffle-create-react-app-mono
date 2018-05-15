@@ -1,9 +1,10 @@
 [*]
+indent_style = space
 trim_trailing_whitespace = true
 insert_final_newline = true
 
 [*.sol]
-tab_width = 4
+indent_size = 4
 
 [*.js]
-tab_width = 2
+indent_size = 2
